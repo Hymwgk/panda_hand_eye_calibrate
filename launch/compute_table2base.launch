@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- 用来计算panda基座与桌面固定标签坐标系之间的变换关系，并保存下来 -->
+<launch>
+    <!-- define args -->
+    <arg name="files_path"  default="$(find panda_hand_eye_calibrate)/config/" />
+
+    <!-- calibration using compute_calibration.py-->
+    <node pkg="panda_hand_eye_calibrate" type="compute_table2base.py" name="compute_table2base" output="screen">
+        <param name="files_path" value="$(arg files_path)" />
+    </node>
+</launch>

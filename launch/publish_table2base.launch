@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- 用来发布panda基座与桌面固定标签坐标系之间的变换关系 -->
+<launch>
+    <!-- define args -->
+    <arg name="parameters_file"  default="$(find panda_hand_eye_calibrate)/config/table2base.yaml" />
+
+    <!-- publish transform  from  table  to  base.py-->
+    <node pkg="panda_hand_eye_calibrate" type="publish_table2base.py" name="publish_table2base" output="screen">
+        <param name="parameters_file" value="$(arg parameters_file)" />
+    </node>
+</launch>  

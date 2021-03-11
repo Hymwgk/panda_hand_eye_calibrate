@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- (start your robot's MoveIt! stack, e.g. include its moveit_planning_execution.launch) -->
+  <!-- (start your tracking system's ROS driver) -->
+
+  <include file="$(find easy_handeye)/launch/publish.launch">
+    <arg name="eye_on_hand" value="false" doc="eye-on-hand instead of eye-on-base" />
+    <arg name="tracking_base_frame" value="kinect2_link"/>
+    <arg name="namespace_prefix" value="panda_eob_calib"/> <!-- use the same namespace that you used during calibration! -->
+  </include>
+
+</launch>
