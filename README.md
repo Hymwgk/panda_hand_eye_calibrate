@@ -8,13 +8,13 @@ typora-root-url: ./
 ## 依赖
 
 1. 需要安装easy_handeye包;参看https://github.com/IFL-CAMP/easy_handeye；
-2. 安装了Panda相关的ROS包；
+2. 安装我们修改的[panda_moveit_config](https://github.com/Hymwgk/panda_moveit_config)，以及[panda_server](https://github.com/Hymwgk/panda_server)；
 
 
 
 ## 标定
 
-1. 自行安装好相机和标定板，标定板使用 [ar_track_alvar](http://wiki.ros.org/ar_track_alvar/)生成的10cm*10cm的二维码标签，id为7
+1. 自行安装好相机和标定板，标定板使用 [ar_track_alvar](http://wiki.ros.org/ar_track_alvar/)生成的10cm*10cm的二维码标签，id为7；注意标定板完全处于相机视野范围，并且距离桌面一定距离，防止自动移动时与桌面出现碰撞
 
    <img src="/pic/image-20210312174138027.png" alt="image-20210312174138027" style="zoom: 25%;" />
 
